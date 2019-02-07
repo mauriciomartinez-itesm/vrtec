@@ -217,13 +217,7 @@ class HubCreatePanel extends Component {
                           </span>
                         ))}
                     </div>
-                    <div className={styles.footer}>
-                      <WithHoverSound>
-                        <button onClick={this.showCustomSceneDialog} className={styles.customButton}>
-                          <FormattedMessage id="home.room_create_options" />
-                        </button>
-                      </WithHoverSound>
-                    </div>
+                    
                   </div>
                   <div className={styles.controls}>
                     <WithHoverSound>
@@ -250,6 +244,14 @@ class HubCreatePanel extends Component {
                     <FormattedMessage id="home.room_create_button" />
                   </button>
                 </WithHoverSound>
+                <WithHoverSound>
+                  <button onClick={this.showCustomSceneDialog} className={styles.customButton}>
+                    <FormattedMessage id="home.room_create_options" />
+                  </button>
+                </WithHoverSound>
+              </div>
+              <div className={styles.footer}>
+                
               </div>
             </div>
           </div>

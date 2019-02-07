@@ -1,5 +1,29 @@
 export const avatars = [
   {
+    id: 'bot1',
+    model: '/src/assets/avatars/AvH_V1.glb'
+  },
+  {
+    id: 'bot2',
+    model: '/src/assets/avatars/AvH_V1_Color2.glb'
+  },
+  {
+    id: 'bot3',
+    model: '/src/assets/avatars/AvM_V1.glb'
+  },
+  {
+    id: 'bot4',
+    model: '/src/assets/avatars/AvM_V1_Color2.glb'
+  },
+  {
+    id: 'bot5',
+    model: '/src/assets/avatars/AvM_V1_Color3.glb'
+  },
+  {
+    id: 'bot6',
+    model: '/src/assets/avatars/AvM_V2.glb'
+  }
+  /*{
     id: "botdefault",
     model: "https://asset-bundles-prod.reticulum.io/bots/BotDefault_Avatar-9f71f8ff22.gltf"
   },
@@ -38,5 +62,5 @@ export const avatars = [
   {
     id: "botwoody",
     model: "https://asset-bundles-prod.reticulum.io/bots/BotWoody_Avatar-0140485a23.gltf"
-  }
+  }*/
 ];

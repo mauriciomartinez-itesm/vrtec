@@ -8,7 +8,8 @@ import { playVideoWithStopOnBlur } from "../utils/video-utils.js";
 import homeVideoWebM from "../assets/video/home.webm";
 import homeVideoMp4 from "../assets/video/home.mp4";
 import hubLogo from "../assets/images/hub-preview-light-no-shadow.png";
-import mozLogo from "../assets/images/moz-logo-black.png";
+import tecLogo from "../assets/images/logo_largo.png";
+import mozLogo from "../assets/images/moz-logo-white.png";
 import classNames from "classnames";
 import { ENVIRONMENT_URLS } from "../assets/environments/environments";
 import { connectToReticulum } from "../utils/phoenix-utils";
@@ -174,10 +175,7 @@ class HomeRoot extends Component {
         <div className={styles.home}>
           <div className={mainContentClassNames}>
             <div className={styles.videoContainer}>
-              <video playsInline muted loop autoPlay className={styles.backgroundVideo} id="background-video">
-                <source src={homeVideoWebM} type="video/webm" />
-                <source src={homeVideoMp4} type="video/mp4" />
-              </video>
+              
             </div>
             <div className={styles.headerContent}>
               <div className={styles.titleAndNav} onClick={() => (document.location = "/")}>
@@ -201,20 +199,19 @@ class HomeRoot extends Component {
               </div>
             </div>
             <div className={styles.heroContent}>
-              <div className={styles.attribution}>
-                Medieval Fantasy Book by{" "}
-                <a
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  href="https://sketchfab.com/models/06d5a80a04fc4c5ab552759e9a97d91a?utm_campaign=06d5a80a04fc4c5ab552759e9a97d91a&utm_medium=embed&utm_source=oembed"
-                >
-                  Pixel
-                </a>
-              </div>
+              <video playsInline muted loop autoPlay className={styles.backgroundVideo} id="background-video">
+                <source src={homeVideoWebM} type="video/webm" />
+                <source src={homeVideoMp4} type="video/mp4" />
+              </video>
               <div className={styles.container}>
+                <div className={styles.logo}>
+                  <img src={tecLogo} />
+                </div>
                 <div className={styles.logo}>
                   <img src={hubLogo} />
                 </div>
+              </div>
+              <div className={styles.container2}>
                 <div className={styles.title}>
                   <FormattedMessage id="home.hero_title" />
                 </div>
@@ -233,7 +230,7 @@ class HomeRoot extends Component {
                 />
               </div>
               {this.state.environments.length > 1 && (
-                <div>
+                <div className={styles.menu_buttons}>
                   <WithHoverSound>
                     <div className={styles.joinButton}>
                       <a href="/link">
